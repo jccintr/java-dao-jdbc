@@ -54,6 +54,12 @@ public class Program {
        sellers = sellerDao.findAll();
        sellers.forEach(System.out::println);
        
+       //deleta um seller
+       System.out.println("Excluindo Seller");
+       sellerDao.deleteById(11);
+       sellers.clear();
+       sellers = sellerDao.findAll();
+       sellers.forEach(System.out::println);
 	}
 
 }
